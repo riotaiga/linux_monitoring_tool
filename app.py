@@ -4,7 +4,7 @@ import monitoring
 app = Flask(__name__)
  
 @app.route('/')
-def index: 
+def index(): 
     mertrics = monitoring.get_system_metrics()
     return render_template('dashboard.html', metrics=metrics) 
 
