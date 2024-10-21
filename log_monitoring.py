@@ -1,4 +1,6 @@
 import logging
+import psutil
+import datetime 
 
 logging.basicConfig(filename='logs/monitoring.log',
                     level=logging.INFO, format='%(asctime)s - %(message)s')
