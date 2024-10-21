@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux System Monitoring</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h1>Linux System Monitoring Dashboard</h1>
+    <div>
+        <p><strong>CPU Usage:</strong> {{ metrics['cpu_usage'] }}%</p>
+        <p><strong>Memory Usage:</strong> {{ metrics['memory_usage'] }}%</p>
+        <p><strong>Disk Usage:</strong> {{ metrics['disk_usage'] }}%</p>
+        <p><strong>Network (Bytes Sent/Received):</strong> {{ metrics['network_stats'].bytes_sent }} / {{
+            metrics['network_stats'].bytes_recv }}</p>
+        <p><strong>Last Update:</strong> {{ metrics['timestamp'] }}</p>
+    </div>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import monitoring
+import linux_monitoring_tool.monitoring as monitoring
 
 app = Flask(__name__)
  
